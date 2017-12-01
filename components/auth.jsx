@@ -1,10 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import styles from '../bulma.css';
+import styles from '../css/bulma.css';
 import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
-console.log(styles);
-
 
 class Auth extends React.Component {
 
@@ -25,7 +23,7 @@ class Auth extends React.Component {
     getURLParameter(name) {
         return decodeURI(
             (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1]
-        )
+        );
     }
 
     getAuth() {
@@ -41,7 +39,7 @@ class Auth extends React.Component {
     checkAuth() {
         const { cookies } = this.props;
         var userid = cookies.get("IMCosmosAuthId");
-        this.state["userid"] = userid;
+        this.state.userid = userid;
         console.log("Check auth");
         if (!userid) {
             this.getAuth();

@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import styles from '../bulma.css';
+import styles from '../css/bulma.css';
 import SSOsignin from '../components/Auth';
 import SysUsers from '../components/SysUsers';
 
@@ -22,9 +22,9 @@ class Home extends React.Component {
                         <div className={styles.navbar} >
                             <div className={styles.navbarBrand} >
                                 <a className={styles.navbarItem} href="../">
-                                <img src="https://intuitmarket.intuitcdn.net/ui/images/QB_logo_site.jpg" alt="logo"/>
+                                    <img src="https://intuitmarket.intuitcdn.net/ui/images/QB_logo_site.jpg" alt="logo"/>
                                 </a>
-                                <span class="navbar-burger burger" data-target="navbarMenu">
+                                <span className={`${styles.navbarBurger} ${styles.burger}` } data-target="navbarMenu">
                                         <span></span>
                                         <span></span>
                                         <span></span>
