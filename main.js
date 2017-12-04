@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import SysUsers from './components/SysUsers';
 import SSOsignin from './components/Auth';
 import styles from './css/bulma.css';
-import Home from "./home/home.jsx";
+import Home from "./components/pages/home.jsx";
 
 import { CookiesProvider } from 'react-cookie';
 
