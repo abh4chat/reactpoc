@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../css/bulma.css';
+import styles from 'css/bulma.css';
 
 class navbar extends React.Component  {
 

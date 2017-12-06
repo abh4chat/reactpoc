@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import styles from '../css/bulma.css';
+import styles from 'css/bulma.css';
 
 class SysUsers extends React.Component {
     constructor(){

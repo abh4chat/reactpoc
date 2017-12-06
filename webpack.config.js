@@ -1,7 +1,15 @@
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+    template: '\index.html',
+    inject: 'body'
+})
+
 var config = {
+    context: path.resolve(__dirname, "src"),
     entry: './main.js',
     output: {
-        path:  '/' ,
+        path: path.resolve(__dirname, 'dist') ,
         filename: 'index_gen.js',
     },
     devtool: 'inline-source-map',
@@ -9,9 +17,14 @@ var config = {
         inline: true,
         port: 8081,
      },
-    
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx'],
+        alias: {
+            components: path.resolve('./src/components'),
+            pages: path.resolve('./src/pages'),
+            css: path.resolve('./src/css'),
+            node_modules : path.resolve('./node_modules')
+        },
     },
     module: {
         loaders: [
@@ -56,7 +69,9 @@ var config = {
                 
             }
         ]
-    }
+    },
+    plugins: [HtmlWebpackPluginConfig],
+
 }
 
 module.exports = config;

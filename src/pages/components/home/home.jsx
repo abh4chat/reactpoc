@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import styles from '../../css/bulma.css';
-import SSOsignin from '../Auth';
-import SysUsers from '../SysUsers';
-import NavBar from '../NavBar';
+import styles from 'css/bulma.css';
+import SSOsignin from 'components/Auth';
+import SysUsers from 'pages/components/users/SysUsers';
+import NavBar from 'pages/components/home/components/NavBar';
 
 import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
